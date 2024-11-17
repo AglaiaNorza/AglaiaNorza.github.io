@@ -1,13 +1,28 @@
+.container {
+    max-width: 860px;   
+    margin: 0 auto;    
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background-color: #23252E; 
+}
+
+.header-image {
+    width: 100%;
+}
+
 body {
+    font-size:16px;
     margin: 0;
     padding: 1.5rem;
-    background-color: #24283b;
-    font-family: "Helvetica";
+    background-color: #23252E;
+    font-family: "Monospace";
     color: #c0caf5;
+    line-height:1.4;
 }
 
 .h-footer {
     margin-top: -10px; 
+    margin-left: 0.2px;
     font-size: 0.8em;     
 }
 
@@ -15,8 +30,8 @@ h1, h2, h3 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 0.2rem;
-    background-color: #24283b;
-    color: #7aa2f7;
+    background-color: #25242E;
+    color: #465E6D;
     font-weight: bold;
 }
 
@@ -44,6 +59,3 @@ a:hover {
   background-color: transparent;
   text-decoration: underline;
 }
-
-
-
