@@ -1,5 +1,5 @@
 .container {
-    max-width: 860px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     padding-right: 1rem;
@@ -10,11 +10,6 @@
     border-style: solid;
     border-color: white;
     border-width: 1px;
-    }
-
-.header-image {
-    width: 100%;
-    object-fit: cover;
 }
 
 body {
@@ -23,12 +18,13 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Helvetica";
     color: #c0caf5;
     line-height: 1.4;
-    background-image: url("../images/prova1.png");
+    background-image: url("../images/bg.png");
 }
+
 .h-footer {
     margin-top: -10px; 
     margin-left: 0.2px;
@@ -76,11 +72,26 @@ a:hover {
 }
 
 .nav-link:visited {
-    color: #565f89;
+    color: #626b96;
 }
 
 .nav-link:hover {
   color: #5a3e8e;
   background-color: transparent;
   text-decoration: underline;
+}
+
+.post-list {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+.post-list li::before {
+    content:attr(date);
+    padding-right: 0.8rem;
+    color: #666c8a;
+}
+
+.post-list li {
+    margin-left: 10px;
 }
