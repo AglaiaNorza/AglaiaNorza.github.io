@@ -1,10 +1,16 @@
 .container {
-    max-width: 860px;   
-    margin: 0 auto;    
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
     padding-right: 1rem;
     padding-left: 1rem;
-    background-color: #23252E; 
-}
+    padding-top: 0.2rem;
+    padding-bottom: 0.5rem;
+    background-color: #23252E;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    }
 
 .header-image {
     width: 100%;
@@ -12,15 +18,17 @@
 }
 
 body {
-    font-size:16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    /*padding: 1.5rem;*/
-    background-color: #23252E;
-    font-family: "Monospace", "Helvetica";
+    font-size: 16px;
+    font-family: "Helvetica";
     color: #c0caf5;
-    line-height:1.4;
+    line-height: 1.4;
+    background-image: url("../images/prova1.png");
 }
-
 .h-footer {
     margin-top: -10px; 
     margin-left: 0.2px;
@@ -28,10 +36,10 @@ body {
 }
 
 h1, h2, h3 {
-    /margin-top: 1rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 0.2rem;
-    background-color: #25242E;
+    background-color: #232ta2E;
     color: #465E6D;
     font-weight: bold;
 }
@@ -55,19 +63,23 @@ a:visited {
   text-decoration: none;
 }
 
-a:visited {
-  color: #565
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #565
-  background-color: transparent;
-  text-decoration: none;
-}
-
 a:hover {
+  color: #5a3e8e;
+  background-color: transparent;
+  text-decoration: underline;
+}
+ 
+.nav-link:link {
+  color: #9aa5ce;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.nav-link:visited {
+    color: #565f89;
+}
+
+.nav-link:hover {
   color: #5a3e8e;
   background-color: transparent;
   text-decoration: underline;
