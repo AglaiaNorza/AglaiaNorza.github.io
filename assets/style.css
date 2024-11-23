@@ -19,7 +19,7 @@ body {
     height: 100vh;
     margin: 0;
     font-size: 18px;
-    font-family: "Helvetica";
+    font-family: "Monospace", "Helvetica";
     color: #c0caf5;
     line-height: 1.4;
     background-image: url("images/bg.png");
@@ -99,11 +99,6 @@ a:hover {
     content:attr(date);
     padding-right: 0.8rem;
     color: #666c8a;
-}
-
-.d-hr {
-    border: none;
-    border-top: 1.9px dotted #8f97bd;
 }
 
 .spotify {
