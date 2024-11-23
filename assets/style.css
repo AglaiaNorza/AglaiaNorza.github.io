@@ -29,7 +29,6 @@ h1, h2, h3 {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     margin-left: 0.2rem;
-    background-color: #232ta2E;
     font-weight: bold;
 }
 
@@ -92,6 +91,7 @@ a:hover {
 }
 
 .post-list li {
+    margin-top: -0.5rem;
     margin-left: 10px;
 }
 
