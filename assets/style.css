@@ -129,6 +129,24 @@ a:hover {
     }
 }
 
+@media (max-height: 594px) and (min-width: 768px) {
+        .container {
+        max-width: 80%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    body {
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 17px;
+    }
+
+}
+
 @media (max-width: 767px) {
     .container {
         max-width: 90%;
@@ -140,10 +158,8 @@ a:hover {
 
     body {
         font-size: 16px;
-        height: 90vh;
+        height: 100vh;
         padding: 20px;          
-        justify-content: center;
-        align-items: center;
     }
 
 }
