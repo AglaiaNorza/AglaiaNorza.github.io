@@ -23,6 +23,7 @@ body {
     color: #c0caf5;
     line-height: 1.4;
     background-image: url("images/bg.png");
+    background-color: #1c1d24
 }
 
 h1, h2, h3 {
@@ -109,11 +110,4 @@ a:hover {
     flex-direction: column;
     margin-right: 10px;
     padding-bottom: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .container {
-    margin: 10px;
-    padding: 10px;
-  }
 }
