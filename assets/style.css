@@ -30,8 +30,15 @@ h1, h2, h3 {
     margin-bottom: 0.5rem;
     margin-left: 0.2rem;
     background-color: #232ta2E;
-    color: #465E6D;
     font-weight: bold;
+}
+
+h1 {
+    color: #4e6878;
+}
+
+h2, h3 {
+    color: #465E6D;
 }
 
 .h-footer {
@@ -92,4 +99,18 @@ a:hover {
     content:attr(date);
     padding-right: 0.8rem;
     color: #666c8a;
+}
+
+.d-hr {
+    border: none;
+    border-top: 1.9px dotted #8f97bd;
+}
+
+.spotify {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 120px;
+    flex-direction: column;
+    margin-right: 10px;
 }
