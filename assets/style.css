@@ -2,6 +2,7 @@
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
+    margin-top: 3rem;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     padding-top: 1rem;
@@ -16,7 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
     margin: 0;
     font-size: 18px;
     font-family: "Monospace", "Helvetica";
@@ -25,6 +26,7 @@ body {
     background-image: url("images/bg.png");
     background-color: #1c1d24
 }
+
 
 h1, h2, h3 {
     margin-top: 1rem;
@@ -123,7 +125,6 @@ a:hover {
     }
 
     body {
-        height: 100vh;
         font-size: 17px;
     }
 }
@@ -138,7 +139,6 @@ a:hover {
     }
 
     body {
-        height: auto;
         padding-top: 20px;
         padding-bottom: 20px;
         font-size: 17px;
@@ -157,7 +157,6 @@ a:hover {
 
     body {
         font-size: 16px;
-        height: auto;
         padding: 20px;          
     }
 
@@ -172,7 +171,6 @@ a:hover {
     }
 
     body {
-        height: 90vh;
         font-size: 14px;    
     }
 }
@@ -186,7 +184,6 @@ a:hover {
     }
 
     body {
-        height: 100vh;
         padding-top: 10px;
         font-size: 14px;    
     }
