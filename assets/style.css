@@ -127,6 +127,7 @@ a:hover {
     color: #666c8a;
 }
 
+/* wip
 .preview {
     display: none;
     position: absolute;
@@ -139,7 +140,7 @@ a:hover {
 
 .post-list li:hover .preview {
     display: block;
-}
+} */
 
 /* media queries ig */
 
