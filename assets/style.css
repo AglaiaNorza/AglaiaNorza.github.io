@@ -41,11 +41,11 @@ h1, h2, h3 {
 }
 
 h1 {
-    color: #4e6878;
+    color: #326270;
 }
 
 h2, h3 {
-    color: #465E6D;
+    color: #395F73;
 }
 
 .h-footer {
@@ -60,6 +60,7 @@ p {
 footer {
     font-size: 10px;
     color: #8f97bd;
+    padding-top: 17px;
 }
 
 blockquote {
@@ -68,6 +69,12 @@ blockquote {
     padding-left: 10px;
     color: #8f97bd;
     font-style: italic;
+}
+
+.c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* media */
