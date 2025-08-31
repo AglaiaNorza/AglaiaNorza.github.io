@@ -1,0 +1,50 @@
+.tier-list {
+  width: 100%; /* full width of parent */
+  border: 2px solid #333;
+  border-radius: 8px;
+  overflow: hidden; /* no overflow */
+  margin: 10px 0 10px 0;
+}
+
+.tier-row {
+  display: flex;
+  align-items: stretch; /* content stretches vertically */
+  min-height: 100px;
+  border-bottom: 2px solid #333;
+}
+
+.tier-row:last-child {
+  border-bottom: none; /* no border on the last row */
+}
+
+.tier-label {
+  width: 60px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* these three center the letter */
+}
+
+.tier-S { background: #e74c3c; }
+.tier-A { background: #e67e22; }
+.tier-B { background: #f1c40f; }
+.tier-C { background: #2ecc71; }
+.tier-D { background: #3498db; }
+
+.tier-content {
+  flex: 1; /* all remaining space after the label */
+  display: flex;
+  flex-wrap: wrap; /* wraps to new line if there are too many */
+  gap: 10px;
+  padding: 10px;
+  background: #000;
+}
+
+.tier-content img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}

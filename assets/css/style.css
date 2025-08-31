@@ -8,7 +8,7 @@ body {
     font-family: "Inconsolata", "Fira Code", "Monospace", "Helvetica";
     color: #c0caf5;
     line-height: 1.4;
-    background-image: url("images/bg-color-v3.png");
+    background-image: url("../images/bg-color-v3.png");
     background-color: #1a1a21;
 }
 
@@ -81,6 +81,16 @@ blockquote {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.center-quote {
+    font-style:italic;
+    border: 1px solid;
+    text-align: center;
+    display: block;
+    width:fit-content;
+    padding: 5px 15px;
+    margin: 20px auto;
 }
 
 /* media */
