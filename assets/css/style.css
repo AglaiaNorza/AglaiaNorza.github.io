@@ -20,6 +20,8 @@ body {
     background-color: #1a1a26;
     border: 1px solid white;
     box-shadow: 2px 2px 10px #1a1c29;
+    overflow: hidden;
+    position: relative;
 }
 
 .smallcontainer {
@@ -84,13 +86,38 @@ blockquote {
 }
 
 .center-quote {
-    font-style:italic;
-    border: 1px solid;
-    text-align: center;
+    font-style: italic;
+    text-align: var(--quotealign);
     display: block;
-    width:fit-content;
+    width: fit-content;
     padding: 5px 15px;
     margin: 20px auto;
+    position: relative; /*using as anchor for extension */        
+    z-index: 0; /*stacking*/  
+    background: var(--quotebg);
+    color: var(--quotecolor);
+}
+
+.center-quote.extend-left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100vw;   
+    right: 100%;   
+    z-index: -1; /*behind quote */
+    background: var(--quotebg);
+}
+
+.center-quote.extend-right::before {
+    content: "";
+    position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;   
+  right: -100vw;    
+  z-index: -1;
+  background: var(--quotebg)
 }
 
 /* media */

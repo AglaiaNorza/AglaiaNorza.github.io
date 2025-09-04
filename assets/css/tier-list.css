@@ -18,7 +18,7 @@
 }
 
 .tier-label {
-  width: 60px;
+  width: 75px;
   text-align: center;
   font-size: 20px;
   font-weight: bold;
@@ -33,6 +33,7 @@
 .tier-B { background: #f1c40f; }
 .tier-C { background: #2ecc71; }
 .tier-D { background: #3498db; }
+.tier-F { background: #fe7ffe; }
 
 .tier-content {
   flex: 1; /* all remaining space after the label */
