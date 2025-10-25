@@ -213,6 +213,14 @@ a:hover {
     color: #666c8a;
 }
 
+.res-list {
+    margin-top:-10px;
+}
+
+.res-list li {
+    margin-bottom: 10px;
+}
+
 /* media queries ig */
 
 @media (max-width: 1100px) and (min-width: 768px), (max-height: 594px) and (min-width: 768px) {
