@@ -189,6 +189,7 @@ a:hover {
     color: #5a3e8e;
 }
 
+
 .nav-link:link {
     color: #9aa5ce;
 }
@@ -205,6 +206,7 @@ a:hover {
 .post-list {
     list-style-type: none;
     padding-left: 1rem;
+    font-weight: bold;
 }
 
 .post-list li::before {
