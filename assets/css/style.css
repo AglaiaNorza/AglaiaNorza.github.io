@@ -1,38 +1,37 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: auto;
+    align-items: flex-start;
+    min-height: 100vh;        
     margin: 0;
     font-size: 19.5px;
     font-family: "Inconsolata", "Fira Code", "Monospace", "Helvetica";
     color: #c0caf5;
     line-height: 1.4;
-    background-image: url("../images/bg-color-v3.png");
+    background-image: url("../images/starryskyblue.gif");
     background-color: #1a1a21;
+
+    background-repeat: no-repeat; 
+    background-size: cover;        
+    background-position: center;   
+    background-attachment: fixed;
 }
 
-.container {
+.container, .smallcontainer {
     max-width: 1000px;
     width: 100%;
     margin: 3rem auto;
     padding: 1rem 1.5rem 0.5rem;
-    background-color: #1a1a26;
-    border: 1px solid white;
-    box-shadow: 2px 2px 10px #1a1c29;
+    background-color: #04040F;
+    background-color: rgba(15, 15, 18, 0.85);
+    border: 0px solid #898898;
+    box-shadow: 2px 2px 100px #161719;
     overflow: hidden;
     position: relative;
 }
 
 .smallcontainer {
-    max-width: 1000px;
-    width: 100%;
     margin: 8rem auto;
-    padding: 1rem 1.5rem 0.5rem;
-    background-color: #1a1a26;
-    /*#23252E;*/
-    border: 1px solid white;
-    box-shadow: 2px 2px 10px #1a1c29;
 }
 
 /* text */
@@ -44,12 +43,16 @@ h1, h2, h3 {
 }
 
 h1 {
-    color: #326270;
+    color: #3e7b91;
     font-size: 2.2em;
 }
 
-h2, h3 {
-    color: #395F73;
+h2 {
+    color: #467b88;
+}
+
+h3 {
+    color: #2f6f7f;
 }
 
 h4 {
