@@ -16,7 +16,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/starryskybright.gif");
+  background-image: url("../images/starryskybrighter.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -32,7 +32,7 @@ body::before {
     background-color: #04040F;
     background-color: rgba(15, 15, 18, 0.85);
     border: 0px solid #898898;
-    box-shadow: 2px 2px 100px #161719;
+    box-shadow: 2px 2px 100px #222326;
     overflow: hidden;
     position: relative;
 }
