@@ -291,3 +291,54 @@ a:hover {
     }
 }
 
+/* COMMONPLACE WALL */
+
+.nav-list-with-dates {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-header-row,
+.nav-list-with-dates li {
+  /* both the header row and the list items use the same two-column grid */
+  display: grid;
+  grid-template-columns: auto max-content; /* flexible title column, fixed date column */
+  column-gap: 40px; 
+  
+  padding: 5px 0; /* separation between items */
+}
+
+.list-header-row {
+  font-weight: bold;
+  border-bottom: 2px solid #5a5f75; 
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* title label is in the first column and date label is in the second */
+.header-title-col {
+  grid-column: 1 / 2;
+}
+
+.header-date-col {
+  grid-column: 2 / 3;
+  text-align: right;
+  padding-right: 0.6rem;
+}
+
+.nav-list-with-dates li {
+  margin: 0; 
+}
+
+.nav-list-with-dates .title-content {
+  grid-column: 1 / 2; /* 1st column */
+}
+
+.nav-list-with-dates .date-content {
+  grid-column: 2 / 3; /* 2nd column */
+  color: #8f97bd; 
+  font-size: 0.9em;
+  text-align: right; /* align date content with date header */
+  padding-right: 0.7rem;
+}
