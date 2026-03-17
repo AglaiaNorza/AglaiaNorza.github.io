@@ -1,0 +1,344 @@
+body {
+  margin: 0;
+  font-size: 19.5px;
+  font-family: "Inconsolata", "Fira Code", "Monospace", "Helvetica";
+  color: #c0caf5;
+  line-height: 1.4;
+  background-color: #1a1a21;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/starryskybrighter.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transform: translateZ(0);
+}
+
+.container, .smallcontainer {
+    max-width: 1000px;
+    width: 100%;
+    margin: 3rem auto;
+    padding: 1rem 1.5rem 0.5rem;
+    background-color: #04040F;
+    background-color: rgba(15, 15, 18, 0.85);
+    border: 0px solid #898898;
+    box-shadow: 2px 2px 100px #222326;
+    overflow: hidden;
+    position: relative;
+}
+
+.smallcontainer {
+    margin: 8rem auto;
+}
+
+
+/* text */
+
+h1, h2, h3 {
+    margin: 1rem 0 0.5rem 0.2rem;
+    font-family: "Quantico";
+    font-weight: bold;
+}
+
+h1 {
+    color: #3e7b91;
+    font-size: 2.2em;
+    line-height:2rem;
+}
+
+h2 {
+    color: #467b88;
+}
+
+h3 {
+    color: #2f6f7f;
+}
+
+h4 {
+    margin: 5px 0 5px 0;
+}
+
+.h-footer {
+    margin: -5px 0 0 0.2px;
+    font-size: 0.8em;     
+}
+
+p {
+    margin-top: 0.6rem;
+}
+
+footer {
+    font-size: 10px;
+    color: #8f97bd;
+    padding-top: 17px;
+}
+
+blockquote {
+    margin-left: 26px;
+    border-left: 4px solid #666c8a;
+    padding-left: 10px;
+    color: #8f97bd;
+    font-style: italic;
+}
+
+.c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-quote {
+    font-style: italic;
+    text-align: var(--quotealign);
+    display: block;
+    width: fit-content;
+    padding: 5px 15px;
+    margin: 20px auto;
+    position: relative; /*using as anchor for extension */        
+    z-index: 0; /*stacking*/  
+    background: var(--quotebg);
+    color: var(--quotecolor);
+}
+
+.center-quote.extend-left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100vw;   
+    right: 100%;   
+    z-index: -1; /*behind quote */
+    background: var(--quotebg);
+}
+
+.center-quote.extend-right::before {
+    content: "";
+    position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;   
+  right: -100vw;    
+  z-index: -1;
+  background: var(--quotebg)
+}
+
+/* media */
+
+.image-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  width: 85%; 
+  padding: 19px 0;
+  margin-left: 1.5rem;
+}
+
+.image {
+  width: 48%;   
+  height: auto;
+  object-fit: cover;
+  box-shadow: 2px 2px 10px #1a1c29;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    align-items: center; 
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px; 
+}
+
+@media (max-width: 500px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr))
+  }
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.2s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.spotify {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 120px;
+    flex-direction: column;
+    margin-right: 10px;
+    padding-bottom: 0.5rem;
+}
+
+/* lists/links */
+
+a:link, a:visited {
+    color: #9aa5ce;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #5a3e8e;
+}
+
+
+.nav-link:link {
+    color: #9aa5ce;
+}
+
+.nav-link:visited {
+    color: #626b96;
+}
+
+.nav-link:hover {
+    color: #5a3e8e;
+    text-decoration: underline;
+}
+
+.post-list {
+    list-style-type: none;
+    padding-left: 1rem;
+    font-weight: bold;
+}
+
+.post-list li::before {
+    content:attr(date);
+    padding-right: 0.8rem;
+    color: #666c8a;
+}
+
+.res-list {
+    margin-top:-10px;
+}
+
+.res-list li {
+    margin-bottom: 10px;
+}
+
+/* media queries ig */
+
+@media (max-width: 1100px) and (min-width: 768px), (max-height: 594px) and (min-width: 768px) {
+    .container {
+        max-width: 80%;
+        padding: 1rem;
+    }
+
+    .smallcontainer {
+        max-width: 80%;
+        padding: 1rem;
+        margin: 5rem auto;
+    }
+
+    body {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 90%;
+        padding: 0.5rem 1rem;
+    }
+
+    .smallcontainer {
+        max-width: 90%;
+        padding: 0.5rem 1rem;
+        margin: 5rem auto;
+
+    }
+
+    body {
+        font-size: 16px;
+        padding: 20px;          
+    }
+
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.7rem;
+    }
+
+    body {
+        font-size: 14px;    
+    }
+}
+
+@media (max-width: 390px) {
+
+    body {
+        padding-top: 10px;
+    }
+}
+
+/* COMMONPLACE WALL */
+
+.nav-list-with-dates {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-header-row,
+.nav-list-with-dates li {
+  /* both the header row and the list items use the same two-column grid */
+  display: grid;
+  grid-template-columns: auto max-content; /* flexible title column, fixed date column */
+  column-gap: 40px; 
+  
+  padding: 5px 0; /* separation between items */
+}
+
+.list-header-row {
+  font-weight: bold;
+  border-bottom: 2px solid #5a5f75; 
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* title label is in the first column and date label is in the second */
+.header-title-col {
+  grid-column: 1 / 2;
+}
+
+.header-date-col {
+  grid-column: 2 / 3;
+  text-align: right;
+  padding-right: 0.6rem;
+}
+
+.nav-list-with-dates li {
+  margin: 0; 
+}
+
+.nav-list-with-dates .title-content {
+  grid-column: 1 / 2; /* 1st column */
+}
+
+.nav-list-with-dates .date-content {
+  grid-column: 2 / 3; /* 2nd column */
+  color: #8f97bd; 
+  font-size: 0.9em;
+  text-align: right; /* align date content with date header */
+  padding-right: 0.7rem;
+}
