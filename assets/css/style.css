@@ -483,4 +483,34 @@ blockquote {
     }
 }
 
+.list-header-row,
+.nav-list-with-dates li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border-color);
+    align-items: center;
+}
 
+.list-header-row {
+    font-weight: bold;
+    border-bottom: 2px solid var(--border-color);
+    text-transform: uppercase;
+    font-family: "Quantico", sans-serif;
+}
+
+.date-content, .header-date-col {
+    text-align: right;
+    font-size: 0.9em;
+    font-family: "Fira Code", monospace;
+}
+
+.nav-list-with-dates {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list-with-dates li:last-child {
+    border-bottom: none;
+}

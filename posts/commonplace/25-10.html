@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale:1.0" />
-        <meta name="theme-color" content="#1a1a21">
+        <meta name="theme-color" content="#f4f4f0">
         <link rel="stylesheet" href="../../assets/css/style.css">
         <link rel="icon" href="../../assets/images/star-icon.png" type="image/png" />
 
@@ -15,15 +15,56 @@
     </head>
 
     <body>
-        <div class="container">
+        <div class="brutalist-wrapper post-layout">
+            
+            <aside class="sidebar mini-sidebar">
+                <a href="../commonplace/commonplace-wall.html" class="brutalist-button back-btn">[ ← back ]</a>
+                
+                <div class="theme-selector">
+                    <p class="theme-label">theme:</p>
+                    <div class="theme-swatches">
+                        <button class="swatch" data-theme="light" style="background: #f4f4f0;" title="Light"></button>
+                        <button class="swatch" data-theme="amber" style="background: #d6b075;" title="Amber Terminal"></button>
+                        <button class="swatch" data-theme="forest" style="background: #485e51;" title="Overgrown Concrete"></button>
+                        <button class="swatch" data-theme="midnight" style="background: #5a5075;" title="Midnight Zine"></button>
+                        <button class="swatch" data-theme="chill-purple" style="background: #83769c;" title="Chill Taro"></button>
+                        <button class="swatch" data-theme="terminal" style="background: #00ff00;" title="Raw Hacker"></button>
+                    </div>
+                </div>
+            </aside>
 
-            <p style = "text-align:center">25-10, pinterest</p>
-            <img src="assets/lovedevourchangebecome.jpg" style="display:block; margin: 15px auto; max-width: 90%">
+            <main class="grid-box article-box">
+                
+                <header class="article-header">
+                    <h1>25-10</h1>
+                    <p class="article-meta">collected from pinterest</p>
+                </header>
 
-            <footer>
-                <p align="center" style="font-size:15px; margin-bottom: -5px; margin-top:-15px"><a href="../commonplace/commonplace-wall.html" title="back to index">[back]</a> </p> <br>
-            </footer> 
-             
+                <div class="article-content">
+                    <img src="assets/lovedevourchangebecome.jpg" style="display:block; margin: 15px auto; max-width: 90%; border: 2px solid var(--border-color); box-shadow: 4px 4px 0px var(--shadow-color);">
+                    <p style="text-align:center">25-10, pinterest</p>
+                </div>
+
+                <footer class="article-footer">
+                    <p align="center" style="font-size:15px; margin-bottom: -5px;"><a href="../commonplace/commonplace-wall.html" title="back to index" class="brutalist-button">[ back to commonplace wall ]</a> </p>
+                </footer> 
+                 
+            </main>
         </div>
+
+        <script>
+            const swatches = document.querySelectorAll('.swatch');
+            const body = document.body;
+            const savedTheme = localStorage.getItem('site-theme') || 'light';
+            body.setAttribute('data-theme', savedTheme);
+
+            swatches.forEach(swatch => {
+                swatch.addEventListener('click', () => {
+                    const theme = swatch.getAttribute('data-theme');
+                    body.setAttribute('data-theme', theme);
+                    localStorage.setItem('site-theme', theme);
+                });
+            });
+        </script>
     </body>
 </html>
