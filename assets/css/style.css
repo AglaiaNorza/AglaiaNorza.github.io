@@ -128,9 +128,10 @@ a:hover {
 }
 
 .sidebar-links {
+    text-align: center;
     margin: 15px 0;
     line-height: 1.8;
-    font-size: 0.8rem;
+    font-size: 0.77rem;
     border-top: 2px solid var(--border-color);
     padding-top: 15px;
 }
