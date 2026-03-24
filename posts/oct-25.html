@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <script> document.body.setAttribute('data-theme', localStorage.getItem('site-theme') || 'light');</script>
+
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale:1.0" />
         <meta name="theme-color" content="#f4f4f0">
@@ -168,19 +170,6 @@
             </main>
         </div>
 
-        <script>
-            const swatches = document.querySelectorAll('.swatch');
-            const body = document.body;
-            const savedTheme = localStorage.getItem('site-theme') || 'light';
-            body.setAttribute('data-theme', savedTheme);
-
-            swatches.forEach(swatch => {
-                swatch.addEventListener('click', () => {
-                    const theme = swatch.getAttribute('data-theme');
-                    body.setAttribute('data-theme', theme);
-                    localStorage.setItem('site-theme', theme);
-                });
-            });
-        </script>
+        <script src="../assets/theme.js"></script>
     </body>
 </html>
