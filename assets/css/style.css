@@ -338,6 +338,55 @@ blockquote {
     border: 2px solid var(--border-color);
 }
 
+.block-caption {
+    margin: 20px -20px -20px -20px; 
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    font-family: "Fira Code", monospace;
+    background: var(--text-color);
+    color: var(--bg-color);
+    text-align: right;
+    font-weight: bold;
+    text-transform: lowercase;
+    display: block;
+}
+
+.grid-box.image-block {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-block figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.image-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     
+    flex-grow: 1;
+}
+
+/* adds separator line only if there's a caption */
+.image-block img:not(:last-child) {
+    border-bottom: 2px solid var(--border-color);
+}
+
+.image-block figcaption {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    font-family: "Fira Code", monospace;
+    background: var(--text-color); 
+    color: var(--bg-color);
+    text-align: right;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
 .empty-block {
     background: transparent;
     border: none;
@@ -515,3 +564,9 @@ blockquote {
 .nav-list-with-dates li:last-child {
     border-bottom: none;
 }
+
+/* -----------------------------------------
+           test
+   ========================================= */
+
+
