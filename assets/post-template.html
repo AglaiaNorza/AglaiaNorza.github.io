@@ -1,33 +1,56 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <script> document.body.setAttribute('data-theme', localStorage.getItem('site-theme') || 'light');</script>
+
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale:1.0" />
-        <meta name="theme-color" content="#1a1a21">
-        <link rel="stylesheet" href="../../assets/css/style.css">
+        <meta name="theme-color" content="#f4f4f0">
+        <link rel="stylesheet" href="../assets/css/style.css">
         <link rel="icon" href="../assets/images/star-icon.png" type="image/png" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inconsolata:wght@200..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-        <title>title</title>
+        <title>page title</title>
     </head>
 
     <body>
-        <div class="container">
-            <header>
-                <h1>title</h1>
-                <p class="h-footer">subtitle</p>
-            </header>
+        <div class="brutalist-wrapper post-layout">
+            
+            <aside class="sidebar mini-sidebar">
+                <a href="../index.html" class="brutalist-button back-btn">[ ← back home ]</a>
+                
+                <div class="theme-selector">
+                    <p class="theme-label">theme:</p>
+                    <div class="theme-swatches">
+                        <button class="swatch" data-theme="light" style="background: #f4f4f0;" title="Light"></button>
+                        <button class="swatch" data-theme="amber" style="background: #d6b075;" title="Amber Terminal"></button>
+                        <button class="swatch" data-theme="forest" style="background: #485e51;" title="Overgrown Concrete"></button>
+                        <button class="swatch" data-theme="midnight" style="background: #5a5075;" title="Midnight Zine"></button>
+                        <button class="swatch" data-theme="terminal" style="background: #00ff00;" title="Raw Hacker"></button>
+                        <button class="swatch" data-theme="chill-purple" style="background: #83769c;" title="Chill Taro"></button>
+                    </div>
+                </div>
+            </aside>
 
-            <p>content</p>
+            <main class="grid-box article-box">
+                <header class="article-header">
+                    <h1>title</h1>
+                    <p class="article-meta">subtitle</p>
+                </header>
 
-          <footer>
-                <p align="center" style="font-size:15px; margin-bottom: -5px"><a href="#" title="go to top">[top]</a> - <a href="../index.html" title="back home">[home]</a></p>
-                <p align="center">by aglaia</p>
-            </footer> 
-             
+
+                <div class="article-content">
+                              <footer class="article-footer">
+                    <p align="center" style="font-size:15px; margin-bottom: -5px"><a href="#" title="go to top" class="brutalist-button">[ top ]</a></p>
+                    <p align="center">by aglaia</p>
+                </footer> 
+                 
+            </main>
         </div>
+
+        <script src="../assets/theme.js"></script>
     </body>
 </html>

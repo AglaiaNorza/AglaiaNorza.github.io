@@ -106,7 +106,7 @@ a:hover {
     color: var(--link-hover-text);
 }
 
-.brutalist-wrapper {
+.wrapper {
     display: flex;
     gap: 20px;
     max-width: 1400px;
@@ -407,7 +407,7 @@ blockquote {
 .span-row-2 { grid-row: span 2; }
 
 @media (max-width: 900px) {
-    .brutalist-wrapper {
+    .wrapper {
         flex-direction: column;
     }
     
@@ -500,14 +500,14 @@ blockquote {
 }
 
 /* image grid */
-.brutalist-image-grid {
+.image-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px; 
     margin: 30px 0;
 }
 
-.brutalist-image-grid {
+.image-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px; 
@@ -515,7 +515,7 @@ blockquote {
     align-items: start; 
 }
 
-.brutalist-image-grid img {
+.image-grid img {
     width: 100%;
     height: auto; 
     margin: 0; 
