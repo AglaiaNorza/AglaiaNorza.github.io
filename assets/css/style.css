@@ -82,7 +82,7 @@ body {
 
 h1, h2, h3 {
     font-family: "Quantico", sans-serif;
-    margin: 0 0 10px 0;
+    margin: 10px 0 10px 0;
     text-transform: lowercase;
 }
 
@@ -460,16 +460,22 @@ blockquote {
 }
 
 .article-header {
-    border-bottom: 4px solid var(--border-color); 
-    margin-bottom: 30px;
-    padding-bottom: 10px;
+    border: 1px dotted var(--border-color);
+    background: var(--quote-bg);
+    margin-bottom: 10px;
+    padding: 15px;
 }
 
 .article-meta {
+    text-align: left;
     font-family: "Quantico", sans-serif;
     font-weight: bold;
     color: var(--border-color);
     margin: 0;
+}
+
+.article-content {
+    padding: 4px;
 }
 
 .article-content p, .article-content li {
