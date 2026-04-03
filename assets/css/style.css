@@ -274,6 +274,26 @@ body[data-theme="chill-purple"] {
     box-shadow: 10px 10px 0px var(--shadow-color); 
 }
 
+/* clickable blocks ! */
+a.grid-box.clickable-block {
+    text-decoration: none;
+    display: flex;
+    color: inherit; 
+    background-color: inherit;
+    border: 2px solid var(--border-color); 
+    padding: 20px; 
+}
+
+a.big-quote.clickable-block {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+a.grid-box.clickable-block:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0px var(--shadow-color);
+}
+
 blockquote {
     margin: 0;
     font-style: italic;
