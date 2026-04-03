@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale:1.0" />
+        <meta name="theme-color" content="#f4f4f0">
+        <link rel="stylesheet" href="../../assets/css/style.css">
+        <link rel="icon" href="../../assets/images/star-icon.png" type="image/png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inconsolata:wght@200..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <title>àgua viva</title>
+    </head>
+
+    <body>
+        <div class="wrapper post-layout">
+            
+            <aside class="sidebar mini-sidebar">
+                <a href="../commonplace/commonplace-wall.html" class="button back-btn">[ ← back ]</a>
+                
+                <div class="theme-selector">
+                    <p class="theme-label">theme:</blockquote>
+                    <div class="theme-swatches">
+                        <button class="swatch" data-theme="light" style="background: #f4f4f0;" title="Light"></button>
+                        <button class="swatch" data-theme="amber" style="background: #d6b075;" title="Amber Terminal"></button>
+                        <button class="swatch" data-theme="forest" style="background: #485e51;" title="Overgrown Concrete"></button>
+                        <button class="swatch" data-theme="midnight" style="background: #5a5075;" title="Midnight Zine"></button>
+                        <button class="swatch" data-theme="chill-purple" style="background: #83769c;" title="Chill Taro"></button>
+                        <button class="swatch" data-theme="terminal" style="background: #00ff00;" title="Raw Hacker"></button>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="grid-box article-box">
+                
+                <header class="article-header">
+                    <h1><i>àgua viva</i></h1>
+                    <p class="article-meta">by clarice lispector</blockquote>
+                </header>
+
+                <div class="article-content">
+                    <blockquote>
+        To interpret myself and formulate me I need new signs and new articulations in shapes found on this side and beyond my human story. I transfigure reality and then another dreaming and sleepwalking reality, creates me. And all of me rolls and as I roll on the ground I add to myself in leaves, I, anonymous work of an anonymous reality only justifiable as long as my life lasts.
+    </blockquote>
+
+                    <p></p>
+
+    <blockquote>
+        I, creature of echoing caverns that I am, and I suffocate because I am word and also its echo.
+    </blockquote>
+
+                    <p></p>
+
+    <blockquote>
+        What shall I tell you: I shall tell you the instants. I go too far and only then do I exist and in a feverish way.
+    </blockquote>
+
+                    <p></p>
+    <blockquote>
+        Is my theme the instant? the theme of my life. I try to keep up with it, I divide thousands of times into as many times as the number of instants running by, fragmented as I am and the moments so fragile—my only vow is to life born with time and growing along with it: only in time itself is there room enough for me.
+    </blockquote>
+                    <p></p>
+
+    <blockquote>
+        Every thing has an instant in which it is. I want to grab hold of the is of the thing. These instants passing through the air I breathe: in fireworks they explode silently in space.
+    </blockquote>
+                    <p></p>
+                    <hr style="border: 1px solid var(--border-color); margin: 20px 0 20px 0"></hr>
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0gjpISRNCiyZR4CFmYqBXp?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+                </div>
+
+                <footer class="article-footer">
+                    <p align="center" style="font-size:15px; margin-bottom: -5px"><a href="#" title="go to top" class="button">[ top ]</a> - <a href="../commonplace/commonplace-wall.html" title="back to index" class="button">[ back to commonplace wall ]</a> - <a href="../../index.html" title="back home" class="button">[ home ]</a>
+ </blockquote>
+                    <p align="center">by aglaia</blockquote>
+                </footer> 
+                 
+            </main>
+        </div>
+
+        <script>
+            const swatches = document.querySelectorAll('.swatch');
+            const body = document.body;
+            const savedTheme = localStorage.getItem('site-theme') || 'light';
+            body.setAttribute('data-theme', savedTheme);
+
+            swatches.forEach(swatch => {
+                swatch.addEventListener('click', () => {
+                    const theme = swatch.getAttribute('data-theme');
+                    body.setAttribute('data-theme', theme);
+                    localStorage.setItem('site-theme', theme);
+                });
+            });
+        </script>
+    </body>
+</html>
