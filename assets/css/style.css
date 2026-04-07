@@ -449,6 +449,11 @@ blockquote {
     .grid-box {
         grid-column: span 1 !important;
     }
+    .grid-box:hover,
+    a.grid-box.clickable-block:hover {
+        transform: none;
+        box-shadow: 6px 6px 0px var(--shadow-color);
+    }
 }
 
 /* -----------------------------------------
