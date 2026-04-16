@@ -115,6 +115,19 @@ a:hover {
     align-items: flex-start;
 }
 
+/* .sidebar { */
+/*     position: sticky; */
+/*     top: 20px; */
+/*     width: 280px; */
+/*     flex-shrink: 0; */
+/*     padding: 20px; */
+/*     background: var(--bg-color); */
+/*     border: 2px solid var(--border-color); */
+/*     box-shadow: 6px 6px 0px var(--shadow-color); */
+/*     max-height: calc(100vh - 40px); */
+/*     overflow-y: auto; */
+/* } */
+
 .sidebar {
     position: sticky;
     top: 20px;
@@ -124,8 +137,9 @@ a:hover {
     background: var(--bg-color);
     border: 2px solid var(--border-color);
     box-shadow: 6px 6px 0px var(--shadow-color);
-    max-height: calc(100vh - 40px);
-    overflow-y: auto;
+    height: calc(100vh - 40px); 
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar-links {
@@ -144,10 +158,19 @@ a:hover {
     margin-top: 20px;
 }
 
+/* .sidebar-posts { */
+/*     border-top: 2px solid var(--border-color); */
+/*     margin-top: 10px; */
+/*     padding-top: 15px; */
+/* } */
+
 .sidebar-posts {
     border-top: 2px solid var(--border-color);
     margin-top: 10px;
     padding-top: 15px;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 10px;
 }
 
 :root, body[data-theme="light"] {
@@ -557,7 +580,6 @@ blockquote {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-
 @media (max-width: 900px) {
     .mini-sidebar {
         width: 100%;
@@ -565,6 +587,37 @@ blockquote {
     }
     .article-box {
         padding: 20px; 
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        display: block; 
+    }
+
+    .sidebar-posts {
+        overflow-y: visible;
+        padding-right: 0;
+    }
+
+    .span-2 {
+        grid-column: span 1;
+    }
+
+    .grid-box {
+        grid-column: span 1 !important;
+    }
+    .grid-box:hover,
+    a.grid-box.clickable-block:hover {
+        transform: none;
+        box-shadow: 6px 6px 0px var(--shadow-color);
     }
 }
 
@@ -676,3 +729,6 @@ blockquote {
 .next-btn {
     right: 10px;
 }
+
+
+
