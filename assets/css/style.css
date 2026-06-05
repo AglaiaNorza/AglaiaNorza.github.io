@@ -730,5 +730,15 @@ blockquote {
     right: 10px;
 }
 
+/* bottom version */
+.carousel-btn-bottom {
+    top: auto;         
+    bottom: 40px;     
+    transform: none; 
+}
+
+.carousel-btn-bottom:active {
+    transform: translate(2px, 2px);
+}
 
 
