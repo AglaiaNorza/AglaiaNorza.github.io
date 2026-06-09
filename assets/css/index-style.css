@@ -141,7 +141,6 @@
             text-decoration-style: dotted;
         }
 
-        /* Drop Shadow Blog Button */
         .shadow-blog-box {
             display: block;
             border: 2px solid var(--border-color);
@@ -189,7 +188,6 @@
             text-decoration: none;
         }
         
-        /* Apply dotted border only to standard links, not the blog box */
         a:not(.shadow-blog-box) {
             border-bottom: 1px dotted var(--border-color);
         }
@@ -222,7 +220,6 @@
             margin-top: 10px;
         }
 
-
         a.link-btn {
             display: inline-block;
             border: 2px solid var(--border-color) !important;
@@ -239,6 +236,16 @@
         }
 
         @media (max-width: 768px) {
+            .header-huge {
+                font-size: 3rem;
+            }
+
+            .profile-pic {
+                width: 150px;
+                height: 150px;
+                font-size: 2.8rem;
+            }
+
             .main-content {
                 border-right: none;
                 border-bottom: 2px solid var(--border-color);
