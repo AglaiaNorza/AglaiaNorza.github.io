@@ -115,6 +115,7 @@
         }
 
         .bio-text {
+            font-size:1.05rem;
             flex: 1;
             min-width: 250px;
             line-height: 1.4;
@@ -258,4 +259,5 @@
                 transform: none;
                 box-shadow: 6px 6px 0px var(--shadow-color);
             }
+
         }
