@@ -18,3 +18,34 @@
             localStorage.setItem('site-theme', theme);
         });
     });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // check if there are any image grids on the page
+    const images = document.querySelectorAll('.image-grid img');
+    
+    if (images.length > 0) {
+        // lightbox HTML
+        const lightbox = document.createElement('div');
+        lightbox.id = 'lightbox';
+        lightbox.className = 'lightbox';
+        
+        const lightboxImg = document.createElement('img');
+        lightboxImg.id = 'lightbox-img';
+        
+        lightbox.appendChild(lightboxImg);
+        document.body.appendChild(lightbox);
+
+        // the images open the lightbox
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+    }
+});

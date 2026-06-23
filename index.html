@@ -35,24 +35,38 @@
         <div class="content-area">
             
             <div class="main-content">
-                <h1 class="header-huge">about me</h1>
+                    <h1 class="header-huge"><u>Aglaia Norza</u></h1>
                 
                 <div class="profile-section">
                     <div class="profile-pic">
-                        [will maybe find a photo]
+                            [will find a photo]
                     </div>
                     <div class="bio-text">
-                            <p><u>Aglaia Norza</u></p>
                         <p>rome, italy</p>
                         <p>university student</p>
-                        <br>
-                            <p>i'm currently finishing up the third year of my bsc in computer science @ sapienza (i'm graduating in july with a thesis on Norm Synthesis for ATL*); i'm very interested in <b>logics</b> (computational and classical), computability, <b>formal methods</b>, and anything related.</p>
+                            <p style="margin-top:15px">i'm currently finishing the third year of my bsc in <b>computer science @ sapienza</b> (i'm graduating in july with a thesis on Norm Synthesis for ATL*); i'm very interested in <b>logics</b> (computational and classical), computability, <b>formal methods</b>, and anything related.</p>
                         <p>outside of uni, i spend most of my time making very specific playlists, drinking tea, and consuming any type of medium.</p>
                     </div>
-                </div>
+                </div> 
 
-                <div class="info-grid">
-                    <div>
+                    <div class="gallery-wrapper">
+                        <p>i also take a lot of (film) photos of subway stations and trains</p>
+                        <div class="photo-gallery">
+                            <div class="photo-card">
+                                <img src="./assets/images/oct25/1.JPG" alt="a photo I took">
+                            </div>
+                            <div class="photo-card">
+                                <img src="./assets/images/oct25/5.JPG" alt="another photo I took">
+                            </div>
+                            <div class="photo-card">
+                                <img src="./assets/images/home/red-subway-stairs.jpg" alt="a third photo I took">
+                            </div>
+                        </div>
+                        <p style="text-align:right">(these are all in berlin ! which is one of my favourite cities)</p>
+                    </div>
+
+                    <div class="info-grid">
+                        <div>
                         <div class="section-title">INTERESTS:</div>
 
                         <p style="font-weight: bold">logics!!</p>
@@ -88,13 +102,6 @@
                         </ul>
                     </div>
                     <div>
-                        <a href="/blog/index.html" class="shadow-blog-box">
-                            <span class="shadow-blog-title">my blog</span>
-                            <span class="shadow-blog-desc">a digital garden of sorts. a place where i talk about what i find interesting, share inspirations, and ramble about whatever's on my mind. [not very academic].</span>
-                        </a>
-
-                        <br>
-
                         <div class="shadow-links-box">
                             <span class="shadow-blog-title">links</span>
                             <div class="links-btn-container">
@@ -105,7 +112,13 @@
                                 <a href="https://open.spotify.com/user/dtcvdixhmitdfl39jd4ulk239?si=d1df6ada55df48cc" class="link-btn">spotify</a>
                             </div>
                         </div>
-                        
+
+                        <br>
+                        <a href="/blog/index.html" class="shadow-blog-box">
+                            <span class="shadow-blog-title">my blog</span>
+                            <span class="shadow-blog-desc">a digital garden of sorts. a place where i talk about things i find interesting, share inspirations, and ramble about whatever's on my mind. [not very academic].</span>
+                        </a>
+
                         <br><br>
 
                         <div class="section-title">EDUCATION:</div>
@@ -126,7 +139,31 @@
             <span>C:\index.html</span>
             <span>1 of ??</span>
         </div>
-    </div>
+        </div>
 
-</body>
+        <div id="lightbox" class="lightbox">
+            <img id="lightbox-img" src="" alt="expanded image">
+        </div>
+
+        <script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+const images = document.querySelectorAll('.photo-card img');
+
+// open the lightbox on image clicks
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        lightboxImg.src = img.src; // copy the image source
+        lightbox.classList.add('active'); // turn on the overlay
+    });
+});
+
+// when the lightbox overlay is clicked, it closes
+lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+});
+</script>
+
+    </body>
 </html>
