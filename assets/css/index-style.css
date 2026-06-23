@@ -143,6 +143,7 @@
         }
 
         .section-title {
+            font-size:1.1rem;
             text-transform: uppercase;
             font-weight: bold;
             margin-bottom: 10px;
@@ -307,13 +308,13 @@
         @media (max-width: 768px) {
 
             .header-huge {
-                font-size: 3rem;
+                font-size: 2.6rem;
             }
 
             .profile-pic {
-                width: 150px;
-                height: 150px;
-                font-size: 2.8rem;
+                width: 140px;
+                height: 140px;
+                font-size: 2.6rem;
             }
 
             .main-content {
