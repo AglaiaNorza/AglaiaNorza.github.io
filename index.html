@@ -14,15 +14,14 @@
 </head>
 <body>
 
-    <div class="window">
-        <div class="title-bar">
-            <span>index.html</span>
-            <div class="title-bar-controls">
-                <div class="control-btn"></div>
-                <div class="control-btn"></div>
-                <div class="control-btn"></div>
+        <div class="window">
+            <div class="title-bar">
+                <span>index.html</span>
+                <div class="title-bar-controls">
+                    <div class="control-btn" id="minimize-btn" style="cursor: pointer;">-</div>
+                    <div class="control-btn" id="maximize-btn" style="cursor: pointer;">▫</div>
+                </div>
             </div>
-        </div>
 
         <div class="menu-bar">
                 <span class="menu-item"><a href="./blog/index.html">BLOG</a></span>
@@ -175,6 +174,26 @@ images.forEach(img => {
 lightbox.addEventListener('click', () => {
     lightbox.classList.remove('active');
 });
+
+// minimization/maximization
+
+const minimizeBtn = document.getElementById('minimize-btn');
+const menuBar = document.querySelector('.menu-bar');
+const contentArea = document.querySelector('.content-area');
+
+minimizeBtn.addEventListener('click', () => {
+    menuBar.classList.toggle('content-collapsed');
+    contentArea.classList.toggle('content-collapsed');
+});
+
+const maximizeBtn = document.getElementById('maximize-btn');
+const windowContainer = document.querySelector('.window');
+
+maximizeBtn.addEventListener('click', () => {
+    windowContainer.classList.toggle('window-maximized');
+});
+
+
 </script>
 
     </body>

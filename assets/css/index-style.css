@@ -44,10 +44,17 @@
             gap: 5px;
         }
 
+
         .control-btn {
             width: 15px;
             height: 15px;
             border: 2px solid var(--border-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px; 
+            font-weight: bold;
+            user-select: none;
         }
 
         .menu-bar {
@@ -423,4 +430,24 @@
             height: 100%;
             object-fit: cover;
             display: block;
+        }
+
+        /* maximisation / minimisation */
+
+        .content-collapsed {
+            display: none !important;
+        }
+
+        .window-maximized {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            max-width: none !important;
+            margin: 0 !important;
+            border-radius: 0 !important;
+            z-index: 9999;
+            overflow-y: auto !important;
+            box-sizing: border-box !important;
         }
