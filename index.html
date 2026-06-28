@@ -188,9 +188,8 @@ contentArea.classList.toggle('content-collapsed');
 const maximizeBtn = document.getElementById('maximize-btn');
 const windowContainer = document.querySelector('.window');
 
-// maximize on mobile screens (under 768px) on page load
-if (window.matchMedia('(max-width: 768px)').matches) {
-windowContainer.classList.add('window-maximized');
+if (window.matchMedia('(max-width: 768px) and (pointer: coarse)').matches) {
+    console.log("Mobile device detected!");
 }
 
 maximizeBtn.addEventListener('click', () => {
