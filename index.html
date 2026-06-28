@@ -180,9 +180,15 @@ const minimizeBtn = document.getElementById('minimize-btn');
 const menuBar = document.querySelector('.menu-bar');
 const contentArea = document.querySelector('.content-area');
 
+
 minimizeBtn.addEventListener('click', () => {
-menuBar.classList.toggle('content-collapsed');
-contentArea.classList.toggle('content-collapsed');
+    // if the window is maximized, un-maximize it first
+    if (windowContainer.classList.contains('window-maximized')) {
+        windowContainer.classList.remove('window-maximized');
+    }
+    
+    menuBar.classList.toggle('content-collapsed');
+    contentArea.classList.toggle('content-collapsed');
 });
 
 const maximizeBtn = document.getElementById('maximize-btn');
