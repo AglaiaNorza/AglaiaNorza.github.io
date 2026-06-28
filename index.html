@@ -164,37 +164,40 @@ const images = document.querySelectorAll('.photo-card img');
 
 // open the lightbox on image clicks
 images.forEach(img => {
-    img.addEventListener('click', () => {
-        lightboxImg.src = img.src; // copy the image source
-        lightbox.classList.add('active'); // turn on the overlay
-    });
+img.addEventListener('click', () => {
+lightboxImg.src = img.src; // copy the image source
+lightbox.classList.add('active'); // turn on the overlay
+});
 });
 
 // when the lightbox overlay is clicked, it closes
 lightbox.addEventListener('click', () => {
-    lightbox.classList.remove('active');
+lightbox.classList.remove('active');
 });
 
 // minimization/maximization
-
 const minimizeBtn = document.getElementById('minimize-btn');
 const menuBar = document.querySelector('.menu-bar');
 const contentArea = document.querySelector('.content-area');
 
 minimizeBtn.addEventListener('click', () => {
-    menuBar.classList.toggle('content-collapsed');
-    contentArea.classList.toggle('content-collapsed');
+menuBar.classList.toggle('content-collapsed');
+contentArea.classList.toggle('content-collapsed');
 });
 
 const maximizeBtn = document.getElementById('maximize-btn');
 const windowContainer = document.querySelector('.window');
 
+// maximize on mobile screens (under 768px) on page load
+if (window.matchMedia('(max-width: 768px)').matches) {
+windowContainer.classList.add('window-maximized');
+}
+
 maximizeBtn.addEventListener('click', () => {
-    windowContainer.classList.toggle('window-maximized');
+windowContainer.classList.toggle('window-maximized');
 });
+        </script>
 
-
-</script>
 
     </body>
 </html>
