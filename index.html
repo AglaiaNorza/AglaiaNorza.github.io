@@ -14,23 +14,22 @@
 </head>
 <body>
 
-    <div class="window">
-        <div class="title-bar">
-            <span>index.html</span>
-            <div class="title-bar-controls">
-                <div class="control-btn"></div>
-                <div class="control-btn"></div>
-                <div class="control-btn"></div>
+        <div class="window">
+            <div class="title-bar">
+                <span>index.html</span>
+                <div class="title-bar-controls">
+                    <div class="control-btn" id="minimize-btn" style="cursor: pointer;">-</div>
+                    <div class="control-btn" id="maximize-btn" style="cursor: pointer;">▫</div>
+                </div>
             </div>
-        </div>
 
-        <div class="menu-bar">
+            <div class="menu-bar">
                 <span class="menu-item"><a href="./blog/index.html">BLOG</a></span>
-                <span class="menu-item"><a href="./assets/files/cv.pdf">CV</a></span>
-            <span class="menu-item"><a href="https://open.spotify.com/user/dtcvdixhmitdfl39jd4ulk239?si=d1df6ada55df48cc">SPOTIFY</a></span>
-            <span class="menu-item"><a href="https://github.com/AglaiaNorza">GITHUB</a></span>
-            <span class="menu-item"><a href="https://www.linkedin.com/in/aglaia-norza/">LINKEDIN</a></span>
-        </div>
+                <span class="menu-item"><a href="./assets/files/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a></span>
+                <span class="menu-item"><a href="https://open.spotify.com/user/dtcvdixhmitdfl39jd4ulk239?si=d1df6ada55df48cc" target="_blank" rel="noopener noreferrer">SPOTIFY</a></span>
+                <span class="menu-item"><a href="https://github.com/AglaiaNorza" target="_blank" rel="noopener noreferrer">GITHUB</a></span>
+                <span class="menu-item"><a href="https://www.linkedin.com/in/aglaia-norza/" target="_blank" rel="noopener noreferrer">LINKEDIN</a></span>
+            </div>
 
         <div class="content-area">
             
@@ -76,7 +75,7 @@
                         </ul>
                             <p style="font-weight: bold">Some more things i am exploring (but don't know enough about yet):</p>
                             <ul>
-                                <li>automated deduction</li>
+                                <li>automated deduction (currently learning Lean!)</li>
                                 <li>type theory & category theory</li>
                                 <li>semantics of programming languages</li>
                             </ul>
@@ -102,16 +101,18 @@
                         </ul>
                     </div>
                     <div>
+
                         <div class="shadow-links-box">
                             <span class="shadow-blog-title">links</span>
                             <div class="links-btn-container">
-                                <a href="./assets/files/cv.pdf" class="link-btn">cv</a>
-                                <a href="https://github.com/AglaiaNorza" class="link-btn">github</a>
-                                <a href="https://www.linkedin.com/in/aglaia-norza/" class="link-btn">linkedin</a>
+                                <a href="./assets/files/cv.pdf" class="link-btn" target="_blank" rel="noopener noreferrer">cv</a>
+                                <a href="https://github.com/AglaiaNorza" class="link-btn" target="_blank" rel="noopener noreferrer">github</a>
+                                <a href="https://www.linkedin.com/in/aglaia-norza/" class="link-btn" target="_blank" rel="noopener noreferrer">linkedin</a>
                                 <a href="mailto:norzaglaia@gmail.com" class="link-btn">email</a>
-                                <a href="https://open.spotify.com/user/dtcvdixhmitdfl39jd4ulk239?si=d1df6ada55df48cc" class="link-btn">spotify</a>
+                                <a href="https://open.spotify.com/user/dtcvdixhmitdfl39jd4ulk239?si=d1df6ada55df48cc" class="link-btn" target="_blank" rel="noopener noreferrer">spotify</a>
                             </div>
                         </div>
+
 
                         <br>
                         <a href="/blog/index.html" class="shadow-blog-box">
@@ -140,7 +141,9 @@
                                 <span class="music-desc">a classic. pure jazz-hop nostalgia - also, amazing sample "tens (calmaria)" by nana caymmi</span>
                             </div>
                             <div class="music-cover">
-                                <a href="https://open.spotify.com/track/4xlpJ99yL9xYQtzG6c3hwk?si=47d3cf2500304177"><img src="./assets/images/home/luv(sic).jpg" alt="album cover"></a>
+                                <a href="https://open.spotify.com/track/4xlpJ99yL9xYQtzG6c3hwk?si=47d3cf2500304177" target="_blank" rel="noopener noreferrer">
+                                    <img src="./assets/images/home/luv(sic).jpg" alt="album cover">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -165,17 +168,45 @@ const images = document.querySelectorAll('.photo-card img');
 
 // open the lightbox on image clicks
 images.forEach(img => {
-    img.addEventListener('click', () => {
-        lightboxImg.src = img.src; // copy the image source
-        lightbox.classList.add('active'); // turn on the overlay
-    });
+img.addEventListener('click', () => {
+lightboxImg.src = img.src; // copy the image source
+lightbox.classList.add('active'); // turn on the overlay
+});
 });
 
 // when the lightbox overlay is clicked, it closes
 lightbox.addEventListener('click', () => {
-    lightbox.classList.remove('active');
+lightbox.classList.remove('active');
 });
-</script>
+
+// minimization/maximization
+const minimizeBtn = document.getElementById('minimize-btn');
+const menuBar = document.querySelector('.menu-bar');
+const contentArea = document.querySelector('.content-area');
+
+
+minimizeBtn.addEventListener('click', () => {
+    // if the window is maximized, un-maximize it first
+    if (windowContainer.classList.contains('window-maximized')) {
+        windowContainer.classList.remove('window-maximized');
+    }
+    
+    menuBar.classList.toggle('content-collapsed');
+    contentArea.classList.toggle('content-collapsed');
+});
+
+const maximizeBtn = document.getElementById('maximize-btn');
+const windowContainer = document.querySelector('.window');
+
+if (window.matchMedia('(max-width: 768px) and (pointer: coarse)').matches) {
+    console.log("Mobile device detected!");
+}
+
+maximizeBtn.addEventListener('click', () => {
+windowContainer.classList.toggle('window-maximized');
+});
+        </script>
+
 
     </body>
 </html>
