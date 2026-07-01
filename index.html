@@ -199,7 +199,7 @@ const maximizeBtn = document.getElementById('maximize-btn');
 const windowContainer = document.querySelector('.window');
 
 if (window.matchMedia('(max-width: 768px) and (pointer: coarse)').matches) {
-    console.log("Mobile device detected!");
+windowContainer.classList.add('window-maximized');
 }
 
 maximizeBtn.addEventListener('click', () => {
