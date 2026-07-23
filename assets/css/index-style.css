@@ -116,7 +116,7 @@
         .profile-pic {
             width: 220px;
             height: 220px;
-            border: 1px solid blue; 
+            border: 2px solid black; 
             display: flex;
             align-items: center;
             justify-content: center;
