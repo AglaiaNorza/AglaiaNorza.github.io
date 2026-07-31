@@ -11,7 +11,7 @@
             font-family: "Inconsolata", "Fira Code", monospace;
             background-color: var(--bg-color);
             color: var(--text-color);
-            min-height: 100vh;
+            min-height: 100dvh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -445,7 +445,7 @@
             top: 0 !important;
             left: 0 !important;
             width: 100vw !important;
-            height: 100vh !important;
+            height: 100dvh !important;
             max-width: none !important;
             margin: 0 !important;
             border-radius: 0 !important;
