@@ -4,17 +4,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!termInput || !termOutput) return;
 
-    const pages = {
-        'whoami': './posts/whoami-wip.html',
-        'commonplace': './posts/commonplace/commonplace-wall.html',
-        'graphics': './posts/commonplace/graphics.html',
-        'mar-26': './posts/mar-26.html',
-        'oct-25': './posts/oct-25.html',
-        'studying-forever': './posts/studying-forever.html',
-        'nov-stuff': './posts/nov-stuff.html',
-        'agua-viva': './posts/commonplace/agua-viva.html',
-        'tractatus': './posts/commonplace/tractatus.html'
-    };
+
+const pages = {
+    'whoami': '/blog/posts/whoami-wip.html',
+    'commonplace': '/blog/posts/commonplace/commonplace-wall.html',
+    'graphics': '/blog/posts/commonplace/graphics.html',
+    'mar-26': '/blog/posts/mar-26.html',
+    'oct-25': '/blog/posts/oct-25.html',
+    'studying-forever': '/blog/posts/studying-forever.html',
+    'nov-stuff': '/blog/posts/nov-stuff.html',
+    'agua-viva': '/blog/posts/commonplace/agua-viva.html',
+    'tractatus': '/blog/posts/commonplace/tractatus.html',
+    'about': '/',
+    'home': '/blog'
+    '~': '/'
+};
 
     const quotes = [
 `"I want you to know, if you ever read this, there was a time when I would rather have had you by my side than any one of these words; I would rather have had you by my side than all the blue in the world.
@@ -101,8 +105,6 @@ const themes = [
 
         'cd': (target) => {
             if (!target) return 'cd: missing page. try <b>ls</b> to see available pages.';
-            if (target === '..' || target === '~') return "you're already here";
-
             if (pages[target]) {
                 setTimeout(() => { window.location.href = pages[target]; }, 600);
                 return `going to ${target}...`;
