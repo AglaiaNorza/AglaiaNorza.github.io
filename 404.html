@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <script> document.body.setAttribute('data-theme', localStorage.getItem('site-theme') || 'light');</script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale:1.0" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="icon" href="../assets/images/star-icon.png" type="image/png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inconsolata:wght@200..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <title>404 | the void</title>
+
+        <style>
+            body {
+                background-color: #000 !important; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+                padding: 0;
+            }
+
+            .void-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .void-title {
+                font-size: 8rem;
+                margin: 0;
+                line-height: 1;
+                letter-spacing: -5px;
+                color: #fff; 
+                border-bottom: none;
+            }
+
+            .void-gif {
+                max-width: 300px;
+                width: 100%;
+                border: 1px solid #333;
+            }
+
+
+            .home-link {
+                font-family: "Fira Code", monospace;
+                font-size: 0.9rem;
+                color: #fff;
+                text-decoration: none;
+                border: 1px solid #333;
+                padding: 10px 20px;
+                background: transparent;
+                transition: all 0.3s ease;
+            }
+
+            .home-link:hover {
+                background: #fff;
+                color: #000;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="void-container">
+            <h1 class="void-title">404</h1>
+            
+            <img src="../assets/images/index/black-hole.gif" alt="event horizon" class="void-gif">
+
+
+            <a href="index.html" class="home-link">[return home]</a>
+        </div>
+
+        <script src="../assets/theme.js"></script>
+    </body>
+</html>
