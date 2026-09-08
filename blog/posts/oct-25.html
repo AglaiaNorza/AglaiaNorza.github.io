@@ -16,24 +16,41 @@
         <title>been a while</title>
     </head>
 
-    <body>
+
+<body>
         <div class="wrapper post-layout">
             
-            <aside class="sidebar mini-sidebar">
-                <a href="../index.html" class="button back-btn">[ ← back home ]</a>
+            <aside class="post-left-col">
                 
-                <div class="theme-selector">
-                    <p class="theme-label">theme:</p>
-                    <div class="theme-swatches">
-                        <button class="swatch" data-theme="light" style="background: #f4f4f0;" title="Light"></button>
-                        <button class="swatch" data-theme="amber" style="background: #d6b075;" title="Amber Terminal"></button>
-                        <button class="swatch" data-theme="forest" style="background: #485e51;" title="Overgrown Concrete"></button>
-                        <button class="swatch" data-theme="midnight" style="background: #5a5075;" title="Midnight Zine"></button>
-                        <button class="swatch" data-theme="terminal" style="background: #00ff00;" title="Raw Hacker"></button>
-                        <button class="swatch" data-theme="chill-purple" style="background: #83769c;" title="Chill Taro"></button>
+                <div class="post-side-block">
+                    <a href="../index.html" class="button back-btn">[ ← back home ]</a>
+                    
+                    <div class="theme-selector">
+                        <p class="theme-label">theme:</p>
+                        <div class="theme-swatches">
+                            <button class="swatch" data-theme="light" style="background: #f4f4f0;" title="Light"></button>
+                            <button class="swatch" data-theme="amber" style="background: #d6b075;" title="Amber Terminal"></button>
+                            <button class="swatch" data-theme="forest" style="background: #485e51;" title="Overgrown Concrete"></button>
+                            <button class="swatch" data-theme="midnight" style="background: #5a5075;" title="Midnight Zine"></button>
+                            <button class="swatch" data-theme="terminal" style="background: #00ff00;" title="Raw Hacker"></button>
+                            <button class="swatch" data-theme="chill-purple" style="background: #83769c;" title="Chill Taro"></button>
+                        </div>
                     </div>
                 </div>
+
+                <div class="post-side-block terminal-box" style="padding: 15px;">
+                    <div class="term-header">guest@aglaia:~$</div>
+                    <div id="term-output" class="term-output">
+                        <p>hi there ! type <b>help</b> to see commands.</p>
+                    </div>
+                    <div class="term-input-wrapper">
+                        <span>></span>
+                        <input type="text" id="term-input" autocomplete="off" class="term-input">
+                    </div>
+                </div>
+
             </aside>
+
 
             <main class="grid-box article-box">
                 
@@ -169,5 +186,6 @@
             </main>
         </div>
     <script src="../../assets/theme.js"></script>
+
 </body>
 </html>
