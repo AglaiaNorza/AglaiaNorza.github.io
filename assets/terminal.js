@@ -16,8 +16,7 @@ const pages = {
     'agua-viva': '/blog/posts/commonplace/agua-viva.html',
     'tractatus': '/blog/posts/commonplace/tractatus.html',
     'about': '/',
-    'home': '/blog'
-    '~': '/'
+    'home': '/blog',
 };
 
     const quotes = [
