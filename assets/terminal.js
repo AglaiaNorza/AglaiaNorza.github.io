@@ -92,7 +92,7 @@ const themes = [
     const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
     const commands = {
-        'help': () => 'try: music, quote, ls, cd [page], theme [theme], man [command], clear',
+        'help': () => 'try: musicrec, quote, ls, cd [page], theme [theme], man [command], clear',
         'musicrec': () => `give <b>${getRandom(music)}</b> a listen !!`,
         'quote': () => getRandom(quotes),
 
