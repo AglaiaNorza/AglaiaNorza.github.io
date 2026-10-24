@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <script> document.body.setAttribute('data-theme', localStorage.getItem('site-theme') || 'light');</script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale:1.0" />
+        <meta name="theme-color" content="#1c1d24" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="icon" href="../assets/images/star-icon.png" type="image/png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inconsolata:wght@200..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <title>feed</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+
+            <aside class="post-left-col">
+                
+                <div class="post-side-block">
+                    <header>
+                        <h1 style="border: 1px dotted var(--border-color);
+                            background: var(--quote-bg); padding: 5px;">some pieces</h1>
+                    </header>
+
+                    <div class="sidebar-posts" style="flex-grow: 0; padding-right: 0;">
+                        <h3>navigation:</h3>
+                        <ul class="post-list">
+                            <li><a href="../blog/index.html">← back home</a></li>
+                            <li><a href="./posts/commonplace/commonplace-wall.html">commonplace wall</a></li>
+                        </ul>
+                    </div>
+
+                    <p>page inspired by <a href="https://makovec.si/blog">Barbi's blog</a> ! (super cool blog!! check it out!)</p>
+
+
+                </div>
+
+                <div class="post-side-block terminal-box" style="padding: 15px;">
+                    <div class="term-header">guest@aglaia:~$</div>
+                    <div id="term-output" class="term-output">
+                        <p>hi there ! type <b>help</b> to see commands.</p>
+                    </div>
+                    <div class="term-input-wrapper">
+                        <span>></span>
+                        <input type="text" id="term-input" autocomplete="off" class="term-input">
+                    </div>
+                </div>
+
+            </aside>
+
+            <main class="content-grid">
+
+
+<div class="grid-box image-block feed-block w-1 h-2">
+    <figure>
+        <img src="../assets/images/feed/no-cuts.jpg" alt="the protest">
+        <figcaption>protest against cuts in research. ended on a lovely light, caught a lot of wind, was surprised to see that austrians use italian chants when they protest (siamo tutti antifascisti!)</figcaption>
+    </figure>
+    <p class="date">Oct 22, 2026</p>
+</div>
+
+        <script src="../assets/terminal.js"></script>
+
+    </body>
+</html>

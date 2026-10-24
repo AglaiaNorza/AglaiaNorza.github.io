@@ -799,14 +799,26 @@ blockquote {
     font-weight: bold;
 }
 
+/* .term-output { */
+/*     height:300px; */
+/*     overflow-y: auto; */
+/*     font-size: 0.9em; */
+/*     margin-bottom: 10px; */
+/*     display: flex; */
+/*     flex-direction: column; */
+/* } */
+
 .term-output {
-    height:300px;
+    flex-grow: 1;
+    height: auto; 
+    min-height: 150px;
     overflow-y: auto;
     font-size: 0.9em;
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
 }
+
 
 .term-output p {
     margin: 5px 0;
@@ -866,4 +878,22 @@ blockquote {
         height: auto;
         margin-bottom: 20px;
     }
+}
+
+
+/* FEED-SPECIFIC  */
+.grid-box.feed-block figcaption {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.grid-box.feed-block .date {
+    background: var(--text-color);
+    color: var(--bg-color);
+    margin: auto 0 0 0; 
+    padding: 10px 15px; 
+    font-family: "Fira Code", monospace;
+    font-size: 11px;
+    text-align: right;
+    font-weight: bold;
 }
