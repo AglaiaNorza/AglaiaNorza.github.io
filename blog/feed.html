@@ -125,13 +125,26 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(video);
         
         video.addEventListener('click', () => {
+            // mobile
+            if (video.webkitEnterFullscreen) {
+                video.muted = false;
+                video.webkitEnterFullscreen();
+                return;
+            }
+
             const isFullscreen = document.fullscreenElement || document.webkitFullscreenElement;
             if (!isFullscreen) {
-                if (video.requestFullscreen) video.requestFullscreen();
-                else if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.webkitRequestFullscreen) {
+                    video.webkitRequestFullscreen();
+                }
             } else {
-                if (document.exitFullscreen) document.exitFullscreen();
-                else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                }
             }
         });
 
@@ -146,6 +159,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.addEventListener('fullscreenchange', onFullscreenChange);
         document.addEventListener('webkitfullscreenchange', onFullscreenChange);
+
+        video.addEventListener('webkitendfullscreen', () => {
+            video.muted = true;
+        });
     });
 
     const lightbox = document.getElementById('lightbox');
