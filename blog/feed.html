@@ -35,6 +35,7 @@
                     </div>
 
                     <p>page inspired by <a href="https://makovec.si/blog">Barbi's blog</a> ! (super cool blog!! check it out!)</p>
+                    <p>(videos have volume when clicked!)</p>
 
 
                 </div>
@@ -53,6 +54,29 @@
             </aside>
 
             <main class="content-grid">
+
+
+
+
+                <div class="grid-box image-block feed-block w-1 h-2">
+                    <figure>
+                        <img src="../assets/images/feed/sunset-1.jpg" alt="sunset">
+                        <video src="../assets/images/feed/sunset.mp4" muted loop playsinline></video>
+                        <figcaption>the sky on the road from ferrara to casalecchio del reno, almost apocalyptic in its beauty. we took an exit and the drop for roman holiday hit exactly as the light changed. couldn't have asked for a better pre-concert welcome.</figcaption>
+                    </figure>
+                    <p class="date">Oct 26, 2026</p>
+                </div>
+
+
+                                <div class="grid-box image-block feed-block w-1 h-1">
+                    <figure>
+                        <video src="../assets/images/feed/fontaines.mp4" muted loop playsinline></video>
+                        <figcaption>fontaines d.c. at the unipol arena. a truly truly truly magical night.</figcaption>
+                    </figure>
+                    <p class="date">Oct 26, 2026</p>
+                </div>
+
+
                 <div class="grid-box image-block feed-block w-1 h-1">
                     <figure>
                         <img src="../assets/images/feed/garlic.jpg" alt="the protest">
@@ -73,10 +97,76 @@
 
 
 
+<div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="Enlarged view">
+</div>
+
+
 
 
 
         <script src="../assets/terminal.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const videos = document.querySelectorAll('.feed-block video');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.play();
+            } else {
+                entry.target.pause();
+            }
+        });
+    }, { threshold: 0.5 });
+
+    videos.forEach(video => {
+        observer.observe(video);
+        
+        video.addEventListener('click', () => {
+            const isFullscreen = document.fullscreenElement || document.webkitFullscreenElement;
+            if (!isFullscreen) {
+                if (video.requestFullscreen) video.requestFullscreen();
+                else if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
+            } else {
+                if (document.exitFullscreen) document.exitFullscreen();
+                else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+            }
+        });
+
+        const onFullscreenChange = () => {
+            const currentFS = document.fullscreenElement || document.webkitFullscreenElement;
+            if (currentFS === video) {
+                video.muted = false;
+            } else {
+                video.muted = true;
+            }
+        };
+
+        document.addEventListener('fullscreenchange', onFullscreenChange);
+        document.addEventListener('webkitfullscreenchange', onFullscreenChange);
+    });
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const feedImages = document.querySelectorAll('.feed-block img');
+
+    feedImages.forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt || '';
+            lightbox.classList.add('active');
+        });
+    });
+
+    lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+    });
+});
+</script>
+
+
 
     </body>
 </html>

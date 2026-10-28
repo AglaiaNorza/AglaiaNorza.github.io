@@ -434,6 +434,15 @@ blockquote {
     text-transform: lowercase;
 }
 
+.image-block video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+
 .empty-block {
     background: transparent;
     border: none;
@@ -896,4 +905,10 @@ blockquote {
     font-size: 11px;
     text-align: right;
     font-weight: bold;
+}
+
+
+.image-grid img,
+.feed-block img {
+    cursor: pointer;
 }
